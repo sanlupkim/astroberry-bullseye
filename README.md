@@ -12,15 +12,16 @@ armhf packages compiled for cpu armv6 (i.e rpi zero used for guding phd2)
   * install raspios-bullseye-lite image
   * add user astrobbery / change user pi -> astroberry
   * update system:
-        `apt update && apt upgrade`
+        `sudo apt update && apt upgrade`
   * install dependencies:
-        `apt install lxde lxsession lxterminal realvnc-vnc-server sysstat pixflat-icons gpsd gpsd-tools javascript-common libc-ares2 libexpat1-dev libjs-jquery libjs-sphinxdoc libjs-underscore libnginx-mod-http-geoip libnginx-mod-http-image-filter \
+  
+        sudo apt install lxde lxsession lxterminal realvnc-vnc-server sysstat pixflat-icons gpsd gpsd-tools javascript-common libc-ares2 libexpat1-dev libjs-jquery libjs-sphinxdoc libjs-underscore libnginx-mod-http-geoip libnginx-mod-http-image-filter \
         libnginx-mod-http-xslt-filter libnginx-mod-mail libnginx-mod-stream libnginx-mod-stream-geoip libpython3-dev libpython3.9-dev nginx nginx-common nginx-core python-pip-whl \
         python3-bidict python3-blinker python3-bottle python3-dev python3-distutils python3-engineio python3-flask python3-flask-socketio python3-gevent python3-gevent-websocket \
         python3-greenlet python3-itsdangerous python3-jinja2 python3-jwcrypto python3-lib2to3 python3-pip python3-psutil python3-pyinotify python3-setuptools python3-simplejson \
         python3-socketio python3-websockify python3-werkzeug python3-wheel python3-zope.event python3.9-dev websockify\
         software-properties-common samba network-manager-gnome arc-theme fam qt5-qmltooling-plugins phonon4qt5-backend-gstreamer gstreamer1.0-plugins-ugly gpsd-clients chrony ldapscripts \
-        install libev4 libcfitsio9 libusb-1.0-0-dev`
+        install libev4 libcfitsio9 libusb-1.0-0-dev
   * remove not-needed packages:
         `apt --purge remove gnome-\* parcellite`
   * download and install indi core packages from here (build for debian 11), rest indi\* works from "apt-add-repository ppa:mutlaqja/indinightly"
@@ -52,8 +53,11 @@ https://groups.io/g/firecapture/message/2885 :
 
 ### indi-pylibcamera
 indi_pylibcamera debianized version 2.1.1
+
 indi_pulibcamera used for Rpi cameras based on sony starvis imx290|462|327 - https://docs.arducam.com/Raspberry-Pi-Camera/Low-Light/Ultra-Low-Light-Starvis-Camera/
-For long exposuers (up to 15s) add to /etc/rc.local:
+
+For long exposures (up to 15s) add to /etc/rc.local:
+    
     v4l2-ctl -d /dev/v4l-subdev0 --set-ctrl=horizontal_blanking=64255
 
 ### oacapture
