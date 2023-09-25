@@ -24,8 +24,9 @@ armhf packages compiled for cpu armv6 (i.e rpi zero used for guding phd2)
         install libev4 libcfitsio9 libusb-1.0-0-dev
   * remove not-needed packages:
         `apt --purge remove gnome-\* parcellite`
-  * download and install indi core packages from here (build for debian 11), rest indi\* works from "apt-add-repository ppa:mutlaqja/indinightly"
-  * install astroberry-server-artwork_2.0.1+deb10u1_all.deb and other packages from astroberry repo - https://www.astroberry.io/repo/
+  * download and install indi core packages from here (build for debian 11), rest indi\* should works from ubuntu "repository ppa:mutlaqja/indinightly" - browse repo https://launchpad.net/~mutlaqja/+archive/ubuntu/ppa/+packages, look for version \*ubuntu20.04.1 and filename ending \*arm64.deb (wget and dpkg -i).  
+*If something don't work - let me know - I try to recompile for Debian 11 to meets its dependencies*
+  * install astroberry-server-artwork_2.0.1+deb10u1_all.deb and other packages from astroberry repo - https://www.astroberry.io/repo/ - browse repo and grab arm64.deb file
   * install astroberry-server-wui_2.1.0_all.deb and astroberry-server-sysmod_2.0.7_all.deb from here (for new python libs and novnc)
   * other packages you need (:
 
@@ -63,3 +64,5 @@ For long exposures (up to 15s) add to /etc/rc.local:
 ### oacapture
 oacapture compiled for arm64 on rasbpian bullseye (11) - directly from https://github.com/openastroproject/openastro.git
 
+### kstars
+kstars depends on libstellarsolver - wget it from astroberry repo - https://www.astroberry.io/repo/pool/main/libs/libstellarsolver/libstellarsolver_2.3+deb11u1_arm64.deb
