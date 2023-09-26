@@ -53,6 +53,7 @@ https://groups.io/g/firecapture/message/2885 :
     sudo apt install libfreetype6:armhf openjdk-17-jre:armhf
 
 To work new ZWO cameras with FireCapture just copy new libASICamera2.so (from libasi package, 32bit!) to FC dir:  
+
     mkdir /tmp/asi && cd /tmp/asi
     wget https://github.com/sanlupkim/astroberry-bullseye/raw/master/deb/libasi_1.29%2B202305311903~deb11_armhf.deb
     ar x
@@ -81,6 +82,8 @@ kstars depends on libstellarsolver - wget it from astroberry repo - https://www.
     sudo dpkg -i libstellarsolver_2.3+deb11u1_arm64.deb
 
 OR  
-add 64-bit repo astroberry  
-    "deb https://www.astroberry.io/repo/ bullseye main"
+add 64-bit repo astroberry for bullseye
+
+    deb https://www.astroberry.io/repo/ **bullseye** main
+
 as described in section "Advanced installation" on wiki page https://www.astroberry.io/docs/index.php?title=Astroberry_Server#Installation
