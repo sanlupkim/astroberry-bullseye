@@ -44,25 +44,8 @@ armhf packages compiled for cpu armv6 (i.e rpi zero used for guding phd2)
 
 ## Apps
 ### firecapture for 64bit system:
-https://groups.io/g/firecapture/message/2885 :
-
-    sudo dpkg --add-architecture armhf
-    sudo apt-get update
-    sudo apt-get install libc6:armhf libncurses5:armhf libstdc++6:armhf libxext6:armhf libxrender1:armhf libxtst6:armhf libusb-1.0:armhf
-    export LD_LIBRARY_PATH=/path/to/your/FireCapture/folder
-    sudo apt install libfreetype6:armhf openjdk-17-jre:armhf
-
-To work new ZWO cameras with FireCapture just copy new libASICamera2.so (from libasi package, 32bit!) to FC dir:  
-
-    mkdir /tmp/asi && cd /tmp/asi
-    wget https://github.com/sanlupkim/astroberry-bullseye/raw/master/deb/libasi_1.29%2B202305311903~deb11_armhf.deb
-    ar x
-    tar -xvf data.tar.xz
-    sudo cp ./usr/lib/arm-linux-gnueabihf/libASICamera2.so.1.29 /opt/FireCapture_v2.7/
-    cd /opt/FireCapture_v2.7/
-    rm libASICamera2.so
-    ln -s libASICamera2.so.1.29 libASICamera2.so
-
+firecapture 2.7.14 has arm64 (aarch64) version and works without modification
+ 
 ### indi-pylibcamera
 indi_pylibcamera debianized version 2.1.1
 
