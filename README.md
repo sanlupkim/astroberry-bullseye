@@ -19,9 +19,9 @@ armhf packages compiled for cpu armv6 (i.e rpi zero used for guding phd2)
         libnginx-mod-http-xslt-filter libnginx-mod-mail libnginx-mod-stream libnginx-mod-stream-geoip libpython3-dev libpython3.9-dev nginx nginx-common nginx-core python-pip-whl \
         python3-bidict python3-blinker python3-bottle python3-dev python3-distutils python3-engineio python3-flask python3-flask-socketio python3-gevent python3-gevent-websocket \
         python3-greenlet python3-itsdangerous python3-jinja2 python3-jwcrypto python3-lib2to3 python3-pip python3-psutil python3-pyinotify python3-setuptools python3-simplejson \
-        python3-socketio python3-websockify python3-werkzeug python3-wheel python3-zope.event python3.9-dev websockify\
+        python3-socketio python3-websockify python3-werkzeug python3-wheel python3-zope.event python3.9-dev websockify \
         software-properties-common samba network-manager-gnome arc-theme fam qt5-qmltooling-plugins phonon4qt5-backend-gstreamer gstreamer1.0-plugins-ugly gpsd-clients chrony ldapscripts \
-        install libev4 libcfitsio9 libusb-1.0-0-dev
+         libev4 libcfitsio9 libusb-1.0-0-dev
   * remove not-needed packages:
         `apt --purge remove gnome-\* parcellite`
   * download and install indi core packages from here (build for debian 11), rest indi\* should works from ubuntu "repository ppa:mutlaqja/indinightly" - browse repo https://launchpad.net/~mutlaqja/+archive/ubuntu/ppa/+packages, look for version \*ubuntu20.04.1 and filename ending \*arm64.deb (wget and dpkg -i).  
